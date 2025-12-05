@@ -58,4 +58,32 @@ void main() {
   names[0] = 'BUDI';
   names.removeAt(2);
   print(names);
+
+  print('===========');
+
+  /**
+   * DEKLARASI LIST SECARA LANGSUNG
+   * List juga mendukung deklarasi data secara langsung ketika pembuatan variable list
+   * kalau misal kita mau bikin list tapi udah ada data list nya kita bisa gunakan perintah berikut:
+   * 
+   * cara1 (tidak perlu menyebutkan tipe datanya, karena bisa langsung deteksi dari value yang ada dalam list):
+   * var namaVariable = [value1, value2, value 3]
+   * 
+   * cara2 (kalau mau eksplisit dengan menyebutkan tipe datanya juga bisa):
+   * var nameVariable = <TipeData>[value1, value2, value3]
+   * 
+   * cara3 (dengan beberapa baris dengan koma):
+   * var nameVariable=[
+   *      value1,
+   *      value2,
+   *      value3,
+   * ]
+   */
+  var namaku = ['Sulthon', 'Mufti', 'aja'];
+  print(namaku);
+
+  namaku.add('yaa');
+  namaku[0] = 'namaku';
+
+  print(namaku);
 }
