@@ -95,4 +95,23 @@ void main() {
   int number3 =
       nullabelNumber2!; //kalau udah tau variable nullable nya tidak null gausah pake '!' lagi sebenernya.
   print(number3);
+
+  print('=========');
+
+  /**
+   * MENGAKSES NULLABLE MEMBER
+   * saat kita akan akses nullable member (property/method/operator), default nya Dart akan kasih peringatan untuk melakukan NULL CHECK dulu kan,
+   * tapi kita bisa akses nullabel member secara aman tampa harus memaksakan konversi, dengan cara menggunakan '?' (tanda tanya),
+   * tapi konsekuensinya, saat mengakses nullable member, hasil dari member itu bisa aja null akalu datanya ternyata null.
+   */
+  int? intNumber;
+  double? doubleNumber = intNumber
+      ?.toDouble(); //tambahkan ? dengan konsekuensi bisa aja hasilnya null.
+  /**
+   * kalau ga pakai '?' kan bakal ada error kalau toDouble tidak bisa karena berkemunkinana null, sehingga wajib untuk melakukan check null dulu, misal cek null nya gini:
+   * if (intNumber != null){
+   *    dataDouble - intNumber.toDouble();
+   * }
+   */
+  print(doubleNumber);
 }
